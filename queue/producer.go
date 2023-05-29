@@ -3,7 +3,7 @@ package queue
 import (
 	"context"
 
-	"github.com/inkochetkov/queue-sqlite/pkg/sqlite"
+	"github.com/inkochetkov/queue-sqlite/sqlite"
 )
 
 // Producer ...

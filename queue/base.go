@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/inkochetkov/queue-sqlite/pkg/sqlite"
+	"github.com/inkochetkov/queue-sqlite/sqlite"
 )
 
 type Mes []byte

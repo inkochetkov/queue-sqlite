@@ -1,12 +1,12 @@
-package test
+package main
 
 import (
 	"context"
 	"testing"
 	"time"
 
-	"github.com/inkochetkov/queue-sqlite/pkg/queue"
-	"github.com/inkochetkov/queue-sqlite/pkg/sqlite"
+	"github.com/inkochetkov/queue-sqlite/queue"
+	"github.com/inkochetkov/queue-sqlite/sqlite"
 	"github.com/stretchr/testify/assert"
 )
 
@@ -53,7 +53,7 @@ func TestQueueProducer(t *testing.T) {
 		q.MesIn <- mes
 	}()
 
-	time.Sleep(20 * time.Second)
+	time.Sleep(3 * time.Second)
 
 	t.Log("test  producer success")
 
@@ -77,7 +77,7 @@ func TestQueueConsumer(t *testing.T) {
 		mNew = <-q.MesOut
 	}()
 
-	time.Sleep(20 * time.Second)
+	time.Sleep(3 * time.Second)
 
 	t.Logf("%s", mNew)
 

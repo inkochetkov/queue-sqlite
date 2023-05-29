@@ -5,7 +5,7 @@ import (
 	"log"
 	p "path"
 
-	"github.com/inkochetkov/exist/pkg/exist"
+	"github.com/inkochetkov/exist"
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 )
@@ -29,7 +29,10 @@ func new(dataSourcePath string) *DB {
 		log.Fatalf("SQL connect fail, %v", err)
 	}
 
-	dbGorm.AutoMigrate(&Entity{})
+	err = dbGorm.AutoMigrate(&Entity{})
+	if err != nil {
+		log.Fatalf("SQL connect fail, %v", err)
+	}
 
 	return &DB{conn: conn, db: dbGorm}
 }

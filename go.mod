@@ -3,7 +3,7 @@ module github.com/inkochetkov/queue-sqlite
 go 1.20
 
 require (
-	github.com/inkochetkov/exist v0.0.2
+	github.com/inkochetkov/exist v0.1.0
 	github.com/stretchr/testify v1.8.2
 	gorm.io/driver/sqlite v1.4.4
 	gorm.io/gorm v1.24.6
